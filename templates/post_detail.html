@@ -5,4 +5,6 @@
             <h3>{{ post.author }}</h3>
             <p>{{ post.body }}</p>
         </div>
-{% endblock content %}
+    <a href="{% url 'post_edit' post.pk %}">Edit post</a>
+    <p><a href="{% url 'post_delete' post.pk %}">Delete post</a></p>
+    {% endblock content %}
