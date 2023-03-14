@@ -7,6 +7,16 @@
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
 </head>
 <body>
+{% if user.is_authenticated %}
+    <p>Xush kelibsiz {{ user.username }}!</p>
+    <p>
+        <a href="{% url 'logout' %}">Log Out</a>
+    </p>
+{% else %}
+    <p>
+        <a href="{% url 'login' %}">Entry site</a>
+    </p>
+{% endif %}
 <header><a href="{% url 'main' %}">KRDev Blog</a></header>
 <div>
     {% block content %}
