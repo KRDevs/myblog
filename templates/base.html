@@ -14,7 +14,8 @@
     </p>
 {% else %}
     <p>
-        <a href="{% url 'login' %}">Entry site</a>
+        <a href="{% url 'login' %}">Entry site</a> |
+        <a href="{% url 'signup' %}">Register</a>
     </p>
 {% endif %}
 <header><a href="{% url 'main' %}">KRDev Blog</a></header>
